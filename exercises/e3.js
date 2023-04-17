@@ -15,7 +15,23 @@
  */
 
 // Your code goes here...
+function doesArrayIncludeItemsBetweenVals(arr,val1,val2) {
+  var includes = false;
 
+  for (let index = 0; index < arr.length; index++) {
+    if (arr[index] > val1 ) {
+      for (let next = 0; next < arr.length; next++) {
+       if (arr[index] < val2) {
+        includes = true;
+        index = arr.length;
+        next = arr.length;
+        return includes;
+       }
+      }
+    }
+  }
+  return includes;
+}
 
 
 
@@ -35,7 +51,32 @@
  */
 
 // Your code goes here...
+function getValueWithConditionOne(num1,num2) {
+  if (num1 == num2 && num1 == 40) {
+    return num1 + num2;
+  }
+  else{
+    return ((num1 * 2)+ (num2 * 2));
+  }
+}
 
+const getValueWithConditionTwo = (num1,num2) =>{
+  if (num1 == num2 && num1 == 40) {
+    return num1 + num2;
+  }
+  else{
+    return ((num1 * 2)+ (num2 * 2));
+  }
+}
+
+const getValueWithConditionThree = function(num1,num2){
+  if (num1 == num2 && num1 == 40) {
+    return num1 + num2;
+  }
+  else{
+    return ((num1 * 2)+ (num2 * 2));
+  }
+}
 
 
 
